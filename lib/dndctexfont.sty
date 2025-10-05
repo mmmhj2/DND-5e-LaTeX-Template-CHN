@@ -7,12 +7,24 @@
     \setCJKmainfont 
       { SimSun } 
       [
+        % Bold and italic fonts are mapped to 黑体 and 楷体
+        % as a convention in Chinese typesetting.
         BoldFont = SimHei,
         ItalicFont = KaiTi,
-        SlantedFont = SimSun,           % Fake slanted font, but not italic font
+        % Fake slanted font & bold slanted font.
+        % WoC mixs up slanted and italic fonts a lot in their books.
+        % It seems proper names refering to other books (e.g. "Dead in Thay") uses the slanted font,
+        % while other emphasis uses the italic font.
+        SlantedFont = SimSun,
         SlantedFeatures = { FakeSlant = 0.15 },
         BoldSlantedFont = SimHei,
-        BoldSlantedFeatures = { FakeSlant = 0.15 }
+        BoldSlantedFeatures = { FakeSlant = 0.15 },
+      ]
+    \setCJKsansfont
+      { SimHei }
+      [
+        AutoFakeBold,
+        AutoFakeSlant
       ]
   }
   {
